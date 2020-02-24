@@ -9,7 +9,8 @@ jobs:
       - run:
           name: start selenium GRID
           command: |
-            hostname | echo $
+            TEST_IP_ADDRESS=`hostname --ip-address`
+            echo "IP ADDRESS: $TEST_IP_ADDRESS"
             chmod +x tools/chromedriver
             chmod +x tools/selenium-server-standalone-3.141.59.jar
             mkdir grid-logs
