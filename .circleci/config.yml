@@ -10,7 +10,7 @@ jobs:
           name: start selenium GRID
           command: |
             TEST_IP_ADDRESS=`hostname --ip-address`
-            export TEST_IP_ADDRESS=$TEST_IP_ADDRESS
+            echo 'export TEST_IP_ADDRESS="$TEST_IP_ADDRESS"' >> $BASH_ENV
             echo "IP ADDRESS: $TEST_IP_ADDRESS"
             chmod +x tools/chromedriver
             chmod +x tools/selenium-server-standalone-3.141.59.jar
