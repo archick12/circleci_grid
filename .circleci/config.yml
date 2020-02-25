@@ -18,12 +18,16 @@ jobs:
             chmod +x tools/selenium-server-standalone-3.141.59.jar
             mkdir grid-logs
             chmod -R 755 grid-logs
-            java -jar tools/selenium-server-standalone-3.141.59.jar -role hub -log hub.log &
+            java -jar tools/selenium-server-standalone-3.141.59.jar -role hub
+          no_output_timeout: 1m
+          background: true
 
       - run:
           name: start node GRID
           command: |
-            java -jar tools/selenium-server-standalone-3.141.59.jar -role node -log node.log &
+            java -jar tools/selenium-server-standalone-3.141.59.jar -role node
+          no_output_timeout: 1m
+          background: true
 
       - run:
           name: install dependencies
