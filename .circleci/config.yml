@@ -10,14 +10,14 @@ jobs:
           name: start selenium GRID
           command: |
             TEST_IP_ADDRESS=`hostname --ip-address`
-            echo 'export TEST_IP_ADDRESS="$TEST_IP_ADDRESS"' >> $BASH_ENV
+            echo "export TEST_IP_ADDRESS=$TEST_IP_ADDRESS" >> $BASH_ENV
             echo "IP ADDRESS: $TEST_IP_ADDRESS"
             chmod +x tools/chromedriver
             chmod +x tools/selenium-server-standalone-3.141.59.jar
             mkdir grid-logs
             chmod -R 755 grid-logs
             java -jar tools/selenium-server-standalone-3.141.59.jar -role hub -log hub.log &
-            sleep 10
+
       - run:
           name: start node GRID
           command: |
