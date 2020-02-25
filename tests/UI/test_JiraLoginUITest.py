@@ -12,7 +12,7 @@ from src.pages.issue_details_page import IssueDetailsPage
 
 class TestJiraLoginUI:
 
-    @pytest.mark.regression
+    @pytest.mark.smoke
     def test_login_to_jira(self, browser):
         self.login_page = LoginPage(browser)
         self.login_page.open("http://jira.hillel.it:8080/secure/Dashboard.jspa")
