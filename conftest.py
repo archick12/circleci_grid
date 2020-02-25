@@ -9,7 +9,7 @@ import os
 def browser():
     # browser = webdriver.Chrome(executable_path=ChromeDriverManager().install())
 
-    print("ENVIRONMENT VARIABLES " + os.environ)
+    print("ENVIRONMENT VARIABLES " + str(os.environ))
     grid_url = "http://" + os.environ['TEST_IP_ADDRESS'] + ":4444/wd/hub"
     grid_url = "http://" + os.environ['TEST_IP_ADDRESS'] + ":4444/wd/hub"
     desired_caps = DesiredCapabilities.CHROME
