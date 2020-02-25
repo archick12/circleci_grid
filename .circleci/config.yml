@@ -47,12 +47,6 @@ jobs:
             . venv/bin/activate
              python3 -m pytest -m regression -v
 
-      - run:
-          name: stop services
-          command: |
-                killall -9 java
-          when: always
-
       - store_artifacts:
           path: grid-logs
           destination: grid-logs
