@@ -1,3 +1,4 @@
 pytest==3.7.2
 pytest-selenium==1.13.0
 webdriver-manager==1.7
+testrail-api==1.7.1
